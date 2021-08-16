@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: database
+    platform: linux/amd64
+    ports:
+      - "3306:3306"
+    restart: always
+
+  postgres:
+    environment:
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: database
+    image: postgres:13.3-alpine
+    restart: always
+    ports:
+      - 5432:5432

@@ -1,0 +1,6 @@
+engine: postgres
+setup:
+  - CREATE TABLE IF NOT EXISTS item (id INT PRIMARY KEY);
+steps:
+  - [1, "INSERT INTO item (id, name, count) VALUES (1, 'book', 5);"]
+  - [0, "SELECT * FROM item;"]

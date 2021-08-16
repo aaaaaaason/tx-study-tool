@@ -1,0 +1,6 @@
+engine: postgres
+teardown:
+  - DROP TABLE IF EXISTS item;
+steps:
+  - [1, "INSERT INTO item (id, name, count) VALUES (1, 'book', 5);"]
+  - [0, "SELECT * FROM item;"]

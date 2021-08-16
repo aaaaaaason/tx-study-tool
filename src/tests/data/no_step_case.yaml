@@ -1,0 +1,5 @@
+engine: postgres
+setup:
+  - CREATE TABLE IF NOT EXISTS item (id INT PRIMARY KEY);
+teardown:
+  - DROP TABLE IF EXISTS item;

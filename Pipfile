@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+python-dotenv = "*"
+tx-study-tool = {editable = true, path = "."}
+pyyaml = "*"
+sqlalchemy = "*"
+pymysql = "*"
+psycopg2 = "*"
+cryptography = "*"
+
+[dev-packages]
+pylint = "*"
+pytest = "*"
+yapf = "*"
+
+[requires]
+python_version = "3.8"
